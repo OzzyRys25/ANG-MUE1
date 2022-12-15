@@ -1,0 +1,56 @@
+@import 'variables';
+.user {
+    background-color: $color-secondary;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    .container {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__row {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1;
+        position: relative;
+        padding: 50px 120px 0;
+        @media all and (max-width: 1440px) {
+            padding: 50px 50px 0;
+        }
+        &:first-of-type {
+            margin-bottom: 50px;
+        }
+        &__wave {
+            position: absolute;
+            z-index: 0;
+            max-width: 50%;
+            &--default {
+                @extend .user__row__wave;
+                top: -7.5%;
+                left: -0.5%;
+            }
+            &--inverse {
+                @extend .user__row__wave;
+                bottom: -5%;
+                right: -0.5%;
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &__woman {
+        max-width: 33%;
+        right: 5%;
+        bottom: -2px;
+        position: relative;
+    }
+    &__carousel {
+        width: 60%;
+    }
+}

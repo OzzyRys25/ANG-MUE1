@@ -1,0 +1,8 @@
+<div class="text-block-btn" [class.default]="!inverse">
+    <h2 class="text-block-btn__title">{{ title }}</h2>
+    <p class="text-block-btn__text">
+        <ng-content></ng-content>
+    </p>
+
+    <app-btn [text]="btnText" (click)="btnAction()" [inverse]="inverse"></app-btn>
+</div>

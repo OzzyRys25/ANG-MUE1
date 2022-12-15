@@ -1,0 +1,18 @@
+@import 'base',
+'layout';
+:root {
+    --color-primary: #1E3547;
+    --color-primary-rgb: 30, 53, 71;
+    --color-secondary: #F43737;
+    --color-secondary-rgb: 244, 55, 55;
+    --color-black: #141414;
+    --color-black-rgb: 20, 20, 20;
+    --color-white: #F1F1F1;
+    --color-white-rgb: 241, 241, 241;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Maven Pro', Roboto, 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+}

@@ -1,0 +1,13 @@
+@import 'functions';
+@mixin iconSize($value) {
+    font-size: rem($value);
+    width: #{$value}px !important;
+    height: #{$value}px !important;
+}
+
+@mixin exactDimension($value) {
+    min-width: #{$value}px;
+    max-width: #{$value}px;
+    min-height: #{$value}px;
+    max-height: #{$value}px;
+}

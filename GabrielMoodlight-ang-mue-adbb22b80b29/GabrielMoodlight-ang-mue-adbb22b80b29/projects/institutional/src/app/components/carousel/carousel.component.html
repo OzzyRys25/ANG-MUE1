@@ -1,0 +1,17 @@
+<div class="carousel" [class.small]="small" #carousel>
+    <div class="carousel__wrapper">
+        <div class="carousel__content">
+            <div class="carousel__item" *ngFor="let info of data[type]; let first = first;" [class.active]="first" (click)="handleImage($event.target)">
+                <img [src]="info.image" alt="" class="carousel__item__image">
+                <span class="carousel__item__info" [class.destiny]="!info.tag">
+                {{ info.tag ? info.tag : info.locale + ', ' + info.distance + 'km' }}
+            </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="carousel__indicators">
+        <div class="carousel__indicators__indicator--prev" (click)="handleDirection('prev')"></div>
+        <div class="carousel__indicators__indicator--next" (click)="handleDirection('next')"></div>
+    </div>
+</div>

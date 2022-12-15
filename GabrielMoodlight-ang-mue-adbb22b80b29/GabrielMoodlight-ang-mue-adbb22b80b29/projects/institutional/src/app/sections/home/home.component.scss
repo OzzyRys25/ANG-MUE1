@@ -1,0 +1,44 @@
+@import 'variables';
+.home {
+    height: 100vh;
+    width: 100%;
+    background-color: $color-primary;
+    position: relative;
+    img {
+        position: absolute;
+    }
+    &__slogan {
+        max-width: 52%;
+        top: 15%;
+        left: 5.5%;
+    }
+    &__man {
+        max-width: 27.5%;
+        z-index: 1;
+        bottom: 0;
+        right: 15%;
+    }
+    &__bullets {
+        max-width: 3.75%;
+        z-index: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15%;
+    }
+    &__tags {
+        max-width: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 2.5%;
+    }
+    &__wave {
+        max-width: 16.5%;
+        top: 10%;
+        right: -3px;
+    }
+    &__logo {
+        max-width: 8.75%;
+        bottom: 1%;
+        right: 2%;
+    }
+}

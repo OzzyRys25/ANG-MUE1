@@ -1,0 +1,26 @@
+@import 'variables',
+'functions';
+.btn {
+    border: none;
+    border-radius: 5px;
+    padding: 0 45px;
+    cursor: pointer;
+    height: 60px;
+    line-height: 60px;
+    transition: 0.3s all;
+    &:hover {
+        transform: scale(1.1);
+    }
+    &.red {
+        background-color: $color-secondary;
+    }
+    &.default {
+        background-color: $color-primary;
+    }
+    &__text {
+        color: $color-white;
+        font-size: rem(40);
+        font-weight: 800;
+        line-height: 1.25;
+    }
+}

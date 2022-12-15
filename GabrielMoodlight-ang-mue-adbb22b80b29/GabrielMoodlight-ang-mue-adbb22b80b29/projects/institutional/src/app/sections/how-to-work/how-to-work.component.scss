@@ -1,0 +1,67 @@
+@import 'variables',
+'functions';
+.how-to-work {
+    padding: 50px 120px 0;
+    background-color: $color-primary;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    @media all and (max-width: 1440px) {
+        padding: 50px 50px 0;
+    }
+    &__videos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        &__item {
+            padding: 25px 0;
+            &:first-of-type {
+                padding-right: 100px;
+            }
+            &:last-of-type {
+                padding-left: 100px;
+            }
+        }
+    }
+    &__divisor {
+        width: 5px;
+        height: 100%;
+        background-color: $color-secondary;
+        position: absolute;
+    }
+    &__coming {
+        height: 100%;
+        width: 100%;
+        min-height: 300px;
+        min-width: 500px;
+        background-color: rgba(var(--color-secondary-rgb), 0.75);
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s all;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
+        &:hover {
+            background-color: $color-secondary;
+        }
+        i {
+            color: $color-white;
+            font-size: rem(120);
+        }
+    }
+    &__video {
+        position: relative;
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: red;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+
+ TEAM 
+
+	Developer: Gabriel Moodlight
+	Website: gabrieldeveloper.com
+	Facebook: fb.com/gabrielmoodlight
+	Whatsapp: +55 11 9 5377 6111
+
+ SITE 
+	
+	Techs: Angular, Node, Express

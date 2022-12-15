@@ -1,0 +1,119 @@
+@import 'variables';
+.carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    &__wrapper {
+        width: 90%;
+        overflow: hidden;
+        position: relative;
+    }
+    &__content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+        min-height: 400px;
+        max-height: 400px;
+        margin-left: -30%;
+        transition: 0s margin-left ease-in-out;
+        &.animated {
+            transition: 0.6s margin-left ease-in-out;
+        }
+    }
+    &__item {
+        min-width: 22.5%;
+        max-width: 22.5%;
+        background-color: $color-white;
+        margin: 0 2.5%;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s min-width ease-in-out, 0.3s max-width ease-in-out;
+        &.active {
+            min-width: 45%;
+            max-width: 45%;
+        }
+        &__image {
+            max-width: 100%;
+        }
+        &__info {
+            font-weight: bold;
+            display: inline-block;
+            &.destiny {
+                border-top: 3px solid $color-primary;
+                margin-top: 5px;
+            }
+        }
+    }
+    &__indicators {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 0;
+        width: 100%;
+        &__indicator {
+            position: absolute;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            transform: translateY(-50%);
+            transition: 0.3s all;
+            &:hover {
+                transform: translateY(-50%) scale(1.25);
+            }
+            &::before,
+            &::after {
+                content: "";
+                background-color: $color-primary;
+                height: 5px;
+                width: 100%;
+                position: absolute;
+            }
+            &::before {
+                top: 6px;
+            }
+            &::after {
+                bottom: 6px;
+            }
+            &--prev {
+                @extend .carousel__indicators__indicator;
+                left: 0;
+                &::after {
+                    transform: rotate(45deg);
+                }
+                &::before {
+                    transform: rotate(-45deg);
+                }
+            }
+            &--next {
+                @extend .carousel__indicators__indicator;
+                right: 0;
+                &::after {
+                    transform: rotate(-45deg);
+                }
+                &::before {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+    &.small {
+        .carousel__wrapper {
+            width: 85%;
+        }
+        .carousel__indicators__indicator {
+            width: 35px;
+            height: 35px;
+            &::before {
+                top: 4px;
+            }
+            &::after {
+                bottom: 4px;
+            }
+        }
+    }
+}

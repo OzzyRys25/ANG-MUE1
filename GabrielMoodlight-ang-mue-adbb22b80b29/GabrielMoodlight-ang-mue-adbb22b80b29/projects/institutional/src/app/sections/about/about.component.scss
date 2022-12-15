@@ -1,0 +1,97 @@
+@import 'variables',
+'functions',
+'mixins';
+.about {
+    background-color: $color-primary;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 50px 120px;
+    width: 100%;
+    @media all and (max-width: 1440px) {
+        padding: 50px 50px 0;
+    }
+    .container {
+        display: flex;
+    }
+    &__column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 45%;
+    }
+    &__info {
+        width: 100%;
+        &:first-of-type {
+            margin-bottom: 2.5%;
+        }
+        &:last-of-type {
+            margin-top: 2.5%;
+        }
+        &__text {
+            font-size: rem(17);
+            text-align: left;
+            color: $color-white;
+            font-weight: 500;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    &__contact {
+        list-style-type: none;
+        padding-left: 2.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 7.5px 0;
+            &:hover {
+                .about__contact__item__icon {
+                    background-color: transparent;
+                    color: $color-secondary;
+                }
+                .about__contact__item__text {
+                    transform: translateX(6.25%);
+                }
+            }
+            &__link {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+            }
+            &__icon {
+                @include exactDimension(50);
+                border-radius: 50%;
+                background-color: $color-secondary;
+                border: 2px solid $color-secondary;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 5px;
+                font-size: rem(25);
+                color: $color-primary;
+                transition: 0.3s all;
+            }
+            &__text {
+                color: $color-white;
+                text-decoration: none;
+                font-size: rem(25);
+                transition: 0.3s all;
+            }
+        }
+    }
+    &__logo {
+        max-width: 75%;
+    }
+    &__lines {
+        max-width: 15%;
+        position: absolute;
+        bottom: 0;
+        left: -5%;
+    }
+}

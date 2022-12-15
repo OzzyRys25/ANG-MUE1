@@ -1,0 +1,12 @@
+@import 'variables',
+'functions';
+.review {
+    background-color: $color-secondary;
+    display: flex;
+    justify-content: center;
+    padding: 50px 120px;
+    row-gap: 15px;
+    @media all and (max-width: 1440px) {
+        padding: 50px 50px 0;
+    }
+}

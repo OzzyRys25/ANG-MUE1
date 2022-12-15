@@ -1,0 +1,45 @@
+<div class="menu">
+    <img src="/assets/images/logo.svg" alt="+1Esportes" class="menu__logo" (click)="navigate('section', 'home')">
+
+    <nav class="menu__nav">
+        <ul class="menu__nav__list">
+            <li class="menu__nav__list__item" (click)="navigate('', '', $event.target)">
+                Alugar quadra
+            </li>
+            <li class="menu__nav__list__item" (click)="navigate('section', 'user', $event.target)">
+                Entrar pro time
+            </li>
+            <li class="menu__nav__list__item" (click)="navigate('section', 'host', $event.target)">
+                Dono de quadra
+            </li>
+            <li class="menu__nav__list__item" (click)="navigate('section', 'review', $event.target)">
+                Resenha
+            </li>
+            <li class="menu__nav__list__item" (click)="navigate('section', 'about', $event.target)">
+                Sobre nós
+            </li>
+            <li class="menu__nav__list__item" (click)="navigate('section', 'how-to-work', $event.target)">
+                Como funciona
+            </li>
+        </ul>
+
+        <div class="menu__panels">
+            <button class="menu__panels__icon" (click)="togglePanelModal()">
+							<mat-icon>person</mat-icon>
+						</button>
+
+            <div class="menu__panels__modal" [@upHeight]="modals.panels.visible" *ngIf="modals.panels.visible">
+                <h5 class="menu__panels__modal__title">
+                    Faça o login:
+                </h5>
+
+                <button class="menu__panels__modal__btn--red" (click)="openPanel('host')">
+									Sou dono de quadra
+								</button>
+                <button class="menu__panels__modal__btn" (click)="openPanel('user')">
+									Sou jogador
+								</button>
+            </div>
+        </div>
+    </nav>
+</div>

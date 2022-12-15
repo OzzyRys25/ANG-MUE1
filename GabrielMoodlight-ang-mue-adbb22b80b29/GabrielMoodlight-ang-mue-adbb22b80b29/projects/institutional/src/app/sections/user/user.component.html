@@ -1,0 +1,24 @@
+<section class="user">
+    <div class="user__row">
+        <img class="user__row__wave--default" src="assets/images/user_wave.svg">
+        <div class="container">
+            <div class="user__carousel">
+                <app-carousel type="destinations" [data]="carouselData" [small]="true"></app-carousel>
+            </div>
+            <app-text-block-btn title="Jogos rolando próximo de você" btnText="Quero jogar!" [btnAction]="openModal">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+                ea commodo consequat.
+            </app-text-block-btn>
+        </div>
+    </div>
+    <div class="user__row">
+        <img class="user__row__wave--inverse" src="assets/images/user_wave.svg">
+        <div class="container">
+            <app-text-block-btn title="Cadastre-se e faça parte desse time" btnText="Quero ser +1" [btnAction]="openModal">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+                ea commodo consequat.
+            </app-text-block-btn>
+            <img src="assets/images/user_woman.png" alt="" class="user__woman">
+        </div>
+    </div>
+</section>

@@ -1,0 +1,19 @@
+@import 'variables',
+'functions';
+.host {
+    background-image: url('../../../assets/images/host_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 200px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &__wave {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        max-width: 17.5%;
+    }
+}

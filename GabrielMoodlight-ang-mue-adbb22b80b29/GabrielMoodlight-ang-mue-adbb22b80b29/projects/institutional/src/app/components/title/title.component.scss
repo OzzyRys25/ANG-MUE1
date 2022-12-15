@@ -1,0 +1,19 @@
+@import 'variables',
+'functions';
+.title {
+    color: $color-primary;
+    font-size: rem(40);
+    font-weight: 800;
+    padding-bottom: 0;
+    margin: 0;
+    border-bottom: 6px solid $color-primary;
+    margin-bottom: 8px;
+    line-height: 40px;
+    &.red {
+        color: $color-secondary;
+        border-bottom-color: $color-secondary;
+    }
+    &.no-border {
+        border-bottom: 0;
+    }
+}

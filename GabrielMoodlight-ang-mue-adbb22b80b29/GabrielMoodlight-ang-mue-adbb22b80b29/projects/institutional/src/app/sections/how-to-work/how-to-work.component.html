@@ -1,0 +1,29 @@
+<section class="how-to-work">
+    <div class="container">
+        <app-title [inverse]="true">Como funciona</app-title>
+
+        <div class="how-to-work__videos">
+
+            <div class="how-to-work__videos__item">
+                <div class="how-to-work__coming" (click)="playVideo()">
+                    <i class="fa fa-play"></i>
+                </div>
+                <app-title [inverse]="true" [noBorder]="true">Sou jogadô</app-title>
+            </div>
+
+
+            <div class="how-to-work__divisor"></div>
+
+            <div class="how-to-work__videos__item">
+                <div class="how-to-work__coming" (click)="playVideo()">
+                    <i class="fa fa-play"></i>
+                </div>
+                <app-title [inverse]="true" [noBorder]="true">Sou cartola</app-title>
+            </div>
+        </div>
+
+        <!--     <video width="700" height="400" class="how-to-work__video" *ngFor="let video of videos">
+			<source [src]="video.src" [type]="getVideoType(video.type)">
+		</video> -->
+    </div>
+</section>
