@@ -1,12 +1,9 @@
 <section class="coming" *ngIf="visible" [@fade]>
     <div class="coming__mask" (click)="close()"></div>
-    <div class="coming__content">
+    <div class="coming__content">        
         <div class="coming__close" (click)="close()"></div>
-        <app-title [noBorder]="true">Em breve</app-title>
         <span class="coming__content__text">
-			Ops! Parece que essa funcionalidade ainda não está disponível. 
-			<br>
-			Em breve teremos novidades por aqui!
+        <img src="../../../assets/images/em_breve_home-01.png">
 		</span>
     </div>
 </section>
